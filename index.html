@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PCMAC</title>
+
+<link rel="stylesheet" type="text/css" href="pacman.css" />
+
+</head>
+
+<body>
+	<table id="container">
+    <tr><td valign="top">
+        <div id="gameArea">
+                    <div id="cover"></div>
+                    <div id="welcomeImg"></div>
+                    <canvas id="canvas" tabIndex="0">
+                            Your browser does not support the canvas element.
+                    </canvas>
+        </div>
+    </td>
+    <td valign="top">
+    <table id="toolBar">
+        <tr><td>
+            <div class="info" id="time"><div id="timeImg"></div><div id="timeText"></div></div>
+        </td></tr>
+        
+        <tr><td>
+            <div class="info" id="score"><div id="scoreImg"></div><div id="scoreText"></div></div>    
+        </td></tr>
+        <tr><td>
+            <div class="info" id="life"></div>  	
+        </td></tr>
+        <tr><td>
+        	<input class="dirButton" id="up" name="up" type="button" onclick="upOnClick()"/>
+        </td></tr>
+        <tr><td>
+        	<input class="dirButton" id="left" name="left" type="button" onclick="leftOnClick()"/>
+            <input class="dirButton" id="down" name="down" type="button" onclick="downOnClick()"/>
+            <input class="dirButton" id="right" name="right" type="button" onclick="rightOnClick()"/>
+        </td></tr>
+        <tr><td>         
+            <div id="sizeArea">Maze Size<br />
+            	<input id="small" name="sizeGroup" type="radio" value="24" checked="checked"/> Regular<br/>
+               	<input id="large" name="sizeGroup" type="radio" value="40"/> Large<br />
+            </div>
+        </td></tr>
+        <tr><td>
+        	<input id="start" name="start" type="button" onclick="newGame()" value="START"/>
+        </td></tr>
+    
+    </table>
+	</td></tr>
+    </table>
+<audio id="audio">
+	Your browser does not support the audio tag.
+</audio>
+<audio id="audioNoLoop">
+	Your browser does not support the audio tag.
+</audio>
+
+<script src="pacman.js"></script>
+<script type="text/javascript">welcome();</script>
+
+</body>
+</html>
